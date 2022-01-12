@@ -1,0 +1,30 @@
+#main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#main p {
+    color: darkgreen;
+    font-size: 1.2em;
+}
+
+#frog {
+    opacity: .0;
+    height: 300px;
+}
+
+#princessImg {
+    height: 300px;
+    width: auto;
+}
+
+#princess {
+    opacity: .0;
+}
+
+#main:hover #frog {
+    opacity: 1.0;
+    transform: translateX(-320px);
+    transition: 0.5s;
+}

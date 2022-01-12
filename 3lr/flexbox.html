@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="flexbox.css"/>
+</head>
+<body>
+
+<div id="main" onclick="showPrincess()">
+    <div id="prince">
+        <img src="/src/3lr/prince.png" height="500"/>
+    </div>
+    <div id="princess">
+        <p>Принцесса</p>
+        <img id="princessImg" src="/src/3lr/princess.png"/>
+    </div>
+    <div id="frog">
+        <p>Ты кто?</p>
+        <img src="/src/3lr/frog.png"/>
+    </div>
+</div>
+
+</body>
+
+<script type="application/javascript">
+    function showPrincess() {
+        document.getElementById("frog").style.transition = '.3s'
+        document.getElementById("frog").style.opacity = '.0'
+
+        document.getElementById("princessImg").style.transform = 'scale(1.5)'
+        document.getElementById("princessImg").style.transition = '2.0s'
+        document.getElementById("princess").style.transition = '.3s'
+        document.getElementById("princess").style.opacity = '1.0'
+
+        setTimeout(rotateFlexbox, 2_000)
+
+    }
+
+    function rotateFlexbox() {
+        document.getElementById("main").style.transform = 'rotate(360deg)'
+        document.getElementById("main").style.transition = '1.5s'
+    }
+</script>
+
+</html>

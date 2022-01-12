@@ -1,0 +1,24 @@
+.content {
+    display: flex;
+}
+
+#appearWords {
+    flex: 1;
+}
+
+#input {
+    flex: 1;
+}
+
+#some {
+    flex: 1;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#buttons button {
+    margin-top: 10px;
+}
