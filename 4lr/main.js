@@ -55,8 +55,6 @@ function randomIndex(min, max) {
 }
 
 function recolor() {
-
-
     let evens = document.querySelector(".class2")
     evens.style.fontWeight = "bold";
 }

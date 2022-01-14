@@ -1,29 +1,29 @@
-#main {
+.main {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-#main p {
+.main p {
     color: darkgreen;
     font-size: 1.2em;
 }
 
-#frog {
+.frog {
     opacity: .0;
     height: 300px;
 }
 
-#princessImg {
+.princessImg {
     height: 300px;
     width: auto;
 }
 
-#princess {
+.princess {
     opacity: .0;
 }
 
-#main:hover #frog {
+.main:hover #frog {
     opacity: 1.0;
     transform: translateX(-320px);
     transition: 0.5s;

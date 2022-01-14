@@ -1,0 +1,57 @@
+#level1 {
+    display: none;
+}
+
+.variants {
+    display: flex;
+    height: 150px;
+}
+
+.variant {
+    width: 150px;
+    text-align: center;
+}
+
+.triangle {
+    margin: 20px;
+    width: 70px;
+    height: 70px;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.square {
+    margin: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.circle {
+    margin: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.changeTheme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstTheme {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    background: rgba(7, 7, 7, 0.75);
+}
+
+.secondTheme {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    background: pink;
+}
+
+#game, #results, #level2 {
+    display: none;
+}
