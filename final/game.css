@@ -1,3 +1,7 @@
+#sectionGame {
+    margin: 15px;
+}
+
 #level1 {
     display: none;
 }
@@ -32,26 +36,59 @@
     border-radius: 50%;
 }
 
+#placeFig {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border: 1px solid black;
+    background: #f1f1f1;
+}
+
+.triangleL3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    border: 1px solid white;
+}
+
+.squareL3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+}
+
+.circleL3 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+
 .changeTheme {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.firstTheme {
+#firstTheme {
     margin: 5px;
     width: 20px;
     height: 20px;
     background: rgba(7, 7, 7, 0.75);
+    border: 1px solid red;
 }
 
-.secondTheme {
+#secondTheme {
     margin: 5px;
     width: 20px;
     height: 20px;
     background: pink;
 }
 
-#game, #results, #level2 {
+#game, #results, #level2, #level3 {
     display: none;
 }

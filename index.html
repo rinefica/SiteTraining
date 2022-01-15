@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>My site</title>
     <link rel="stylesheet" href="1lr/main.css"/>
+    <link rel="stylesheet" href="final/game.css"/>
     <script type="text/javascript" src="4lr/main.js"></script>
+    <script type="text/javascript" src="final/game.js"></script>
+    <script type="text/javascript" src="final/level1.js"></script>
+    <script type="text/javascript" src="final/level2.js"></script>
+    <script type="text/javascript" src="final/level3.js"></script>
+    <script type="text/javascript" src="final/timer.js"></script>
 </head>
 <body>
 
@@ -21,7 +27,6 @@
     <nav id="menu">
         <img id="icon" src="./src/1lr/icon.png">
         <ul>
-            <li><a href="final/game.html">FINAl project</a></li>
             <li><a href="2lr/picture.html">lr 2</a></li>
             <li><a href="3lr/flexbox.html">LR 3</a></li>
             <li><a href="5lr/menu.html">LR 5</a></li>
@@ -49,6 +54,62 @@
             <h1 class="title"> Третье название</h1>
             <p class="text">Просто текст</p>
         </article>
+
+        <section id="sectionGame">
+            <div id="loginForm">
+                <input id="auth"> <button onclick="saveUser()">Login</button>
+            </div>
+
+            <div id="game">
+                <div class="changeTheme">
+                    <p>Цветовая палитра фигур: </p>
+                    <div id="firstTheme" onclick="changeTheme(1)"></div>
+                    <div id="secondTheme" onclick="changeTheme(2)"></div>
+                </div>
+                <div class="mainInfo">
+                    <p id="level">Уровень: -</p>
+                    <p id="scores">Очки: -</p>
+                </div>
+                <button id="changeLevel" onclick="changeLevel()">Начать игру</button>
+
+                <div id="level1">
+                    <p class="question">Выберите, где слово и цвет его написания совпадают </p>
+                    <p id="currentNumber"></p>
+                    <div class="variants">
+                        <div class="variant" id="var0" onclick="changeVariants(0)">
+                            <p></p>
+                        </div>
+                        <div class="variant" id="var1" onclick="changeVariants(1)">
+                            <p></p>
+                        </div>
+                        <div class="variant" id="var2" onclick="changeVariants(2)">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="level2">
+
+                    <p id="tryLevel2">Вопросов осталось: </p>
+                    <p id="task">За три секунды найдите красный треугольник</p>
+                    <p id="time">Секунд осталось: </p>
+
+                    <div class="variants" id="variants2">
+                    </div>
+                </div>
+
+                <div id="level3">
+                    <p onclick="prepareLevel3()">Найдите все <span id="taskLevel3"></span> фигуры в области</p>
+
+                    <div id="placeFig"></div>
+                </div>
+
+            </div>
+
+            <div id="results">
+                <p>Результаты:</p>
+            </div>
+        </section>
     </div>
 
     <div class="sidebar">

@@ -1,14 +1,4 @@
-let figTypes = [
-    "triangle",
-    "square",
-    "circle",
-]
 
-let figNames = {
-    triangle: "треугольник",
-    square: "квадрат",
-    circle: "круг",
-}
 
 let countLevel2 = 5;
 let answerLevel2;
@@ -30,9 +20,9 @@ function startLevel2(selectedVariant) {
 
     if (countLevel2 > 0) {
         setTimer();
-        prepareLevel2()
+        prepareLevel2();
     } else {
-        showResults()
+        endLevel2();
     }
 }
 
@@ -66,4 +56,11 @@ function prepareLevel2() {
 
 function shuffledFigs() {
     return figTypes.sort(() => 0.5 - Math.random());
+}
+
+function endLevel2() {
+    document.getElementById('level2').style.display = 'none';
+
+    currentLevel++;
+    document.getElementById('changeLevel').style.display = 'block';
 }

@@ -27,7 +27,7 @@ function prepareRound() {
     backColorArray.forEach((color, index) => {
         let textColor;
         do {
-            textColor = randomColor()
+            textColor = randomColor();
         } while (textColor === color);
         textColorArray[index] = textColor;
     });

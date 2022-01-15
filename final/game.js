@@ -1,27 +1,32 @@
 const keysFirst = [
-    "green",
-    "black",
-    "blue",
-    "yellow",
-];
-const keysSecond = [
-    "grey",
+    "red",
     "orange",
+    "yellow",
+    "green",
+    "blue",
     "indigo",
-    "pink",
 ];
 
-let keys = keysSecond;
+const keysSecond = [
+    "grey",
+    "indigo",
+    "pink",
+    "black",
+    "yellow",
+];
+
+let keys = keysFirst;
 
 const colors = {
     green: "#2E8B57FF",
     black: "#000000",
     blue: "#1E90FF",
-    yellow: "#F2CD3D",
+    yellow: "#d2b700",
     grey: "#6C6A6BFF",
-    orange: "#DD8513",
+    orange: "#b06902",
     indigo: "#4B0082FF",
-    pink: "#FFC0CBFF",
+    pink: "#832d74",
+    red: "#be0c0c",
 };
 
 const names = {
@@ -33,11 +38,36 @@ const names = {
     orange: "оранжевый",
     indigo: "фиолетовый",
     pink: "розовый",
+    red: "красный",
 };
+
+const namesPlural = {
+    green: "зелёные",
+    black: "чёрные",
+    blue: "синие",
+    yellow: "жёлтые",
+    grey: "серые",
+    orange: "оранжевые",
+    indigo: "фиолетовые",
+    pink: "розовые",
+    red: "красные",
+};
+
+const figTypes = [
+    "triangle",
+    "square",
+    "circle",
+]
+
+const figNames = {
+    triangle: "треугольник",
+    square: "квадрат",
+    circle: "круг",
+}
 
 let currentLevel = 0;
 let scores = 0;
-
+let currentUser;
 
 function changeLevel() {
     updateLevel()
@@ -52,9 +82,13 @@ function changeLevel() {
         document.getElementById('level2').style.display = 'block';
         startLevel2();
     }
+
+    if (currentLevel === 2) {
+        document.getElementById('level3').style.display = 'block';
+        prepareLevel3();
+    }
 }
 
-let currentUser;
 function saveUser() {
     currentUser = document.getElementById("auth").value;
     localStorage.setItem(currentUser, scores);
@@ -75,11 +109,24 @@ function showResults() {
 }
 
 function changeTheme(number) {
-    if (number === 1)
-        keys = keysFirst;
+    let first = document.getElementById("firstTheme");
+    let second = document.getElementById("secondTheme");
 
-    if (number === 2)
+    let selected = "1px solid red"
+    let unselected = "none"
+
+    if (number === 1) {
+        keys = keysFirst;
+        first.style.border = selected;
+        second.style.border = unselected;
+    }
+
+    if (number === 2) {
         keys = keysSecond;
+        first.style.border = unselected;
+        second.style.border = selected;
+    }
+
 }
 
 function updateLevel() {
