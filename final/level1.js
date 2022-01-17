@@ -57,6 +57,7 @@ function prepareRound() {
 
         textVariant.innerHTML = names[textNameArray[i]];
         textVariant.style.color = colors[textColorArray[i]];
+        textVariant.style.fontSize = '1.3em';
     }
 }
 
